@@ -9,6 +9,6 @@ spec:
     app: nextjs-app
   type: NodePort
   ports:
-    - port: 3000       # service port
-      targetPort: 3000 # container port
-      nodePort: 30080  # optional fixed NodePort (30000–32767); or remove line to auto-assign
+    - port: 3000       
+      targetPort: 3000 
+      nodePort: 30080  
