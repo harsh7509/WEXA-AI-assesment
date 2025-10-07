@@ -13,10 +13,9 @@ RUN npm run build
 FROM node:${NODE_VERSION} AS runner
 WORKDIR /app
 ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 PORT=3000
-# non-root for security
 USER node
 
-# Runtime needs .next, public, node_modules, package.json for `next start`
+# Runtime needs for `next start`
 COPY --from=builder --chown=node:node /app/package*.json ./
 COPY --from=builder --chown=node:node /app/.next ./.next
 COPY --from=builder --chown=node:node /app/public ./public
