@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: nextjs
-          image: ghcr.io/harsh7509/https://github.com/harsh7509/WEXA-AI-assesment:latest
+          image: ghcr.io/harsh7509/wexa-ai-assesment:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
